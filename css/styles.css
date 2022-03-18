@@ -228,6 +228,7 @@ img {
 .location-checkbox:checked + .widget-btn__location {
   background-color: #ffcf26;
 }
+/* Widget term */
 .radio {
   cursor: pointer;
   margin-bottom: 15px;
@@ -277,7 +278,7 @@ img {
   line-height: 1.18;
   color: #000000;
 }
-
+/* widget  */
 .checkbox {
   cursor: pointer;
   margin-bottom: 15px;
@@ -331,6 +332,7 @@ img {
   display: inline-block;
   background: initial;
   border: none;
+  padding: 0;
 
   font-family: inherit;
   font-weight: 400;
@@ -344,4 +346,110 @@ img {
 .link-show-more:hover {
   color: #0d78c4;
   text-decoration: underline;
+}
+
+.hidden-elements {
+  display: none;
+}
+.toggel {
+  cursor: pointer;
+}
+.toggel__real {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+.toggel__real:checked + .toggel__fake {
+  background-color: #ffe074;
+}
+.toggel__fake {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+
+  width: 37px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+  vertical-align: bottom;
+}
+.toggel__fake:before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+
+  background: #3c3c3c;
+}
+.toggel__real:checked + .toggel__fake:before {
+  left: 19px;
+}
+.toggel__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: #3c3c3c;
+}
+.toggel__real:checked ~ .toggel__title {
+  font-weight: 500;
+}
+/* form buttons */
+.form-btn {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 10px;
+}
+.btn-submit {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  background-color: #ffcf26;
+  color: #000000;
+
+  transition: background-color 0.2s ease-in;
+}
+.btn-submit:hover {
+  background-color: #d8b124;
+}
+.btn-reset {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  border: 1px solid #d6d6d6;
+
+  color: #3c3c3c;
+  background-color: inherit;
+
+  transition: background-color 0.2s ease-in;
+}
+.btn-reset::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 6px;
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url(./../img/x.svg);
+  background-repeat: no-repeat;
+  background-size: initial;
+}
+.btn-reset:hover {
+  background-color: #d3cccc;
 }
