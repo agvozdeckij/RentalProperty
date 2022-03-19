@@ -142,6 +142,9 @@ img {
 
   color: #777777;
 }
+.card-link-hidden {
+  display: none;
+}
 .btn {
   width: 100%;
   background: #dad8d8;
