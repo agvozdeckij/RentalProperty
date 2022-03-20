@@ -213,6 +213,7 @@ img {
   line-height: 1.16;
   color: #000000;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .widget-title::after {
   content: "";
@@ -225,6 +226,12 @@ img {
   background-image: url("./../img/chevron-up.svg");
   background-repeat: no-repeat;
   background-size: initial;
+}
+.widget-title--active::after {
+  transform: rotate(180deg);
+}
+.widget-body--hidden {
+  display: none;
 }
 
 /* location btns group */
@@ -371,6 +378,7 @@ img {
   line-height: 1.18;
   color: #000000;
 }
+/* Кнопка показать ёщё в widget:дополнительніе услуги */
 .link-show-more {
   display: inline-block;
   background: initial;
@@ -390,6 +398,7 @@ img {
   color: #0d78c4;
   text-decoration: underline;
 }
+/* Кнопка показать ёщё в widget:дополнительніе услуги */
 
 .hidden-elements {
   display: none;
